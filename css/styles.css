@@ -1,0 +1,36 @@
+*{
+    border: 1px solid greenyellow;
+}
+
+.navbar{
+    background-color: rgb(0, 0, 0);
+}
+
+.hero{
+    background-image: url(../assets/img/hero2.jpg);
+    height: 83vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gift{
+    background-color: rgb(230, 147, 247);
+    overflow: hidden;
+}
+
+@media (min-width: 992px) {
+    .gift img{
+        width: 100%;
+    }
+}
+
+.tarjeta{
+    background-color: rgb(243, 199, 245);
+
+}
+
+.nosotros__index{
+    background-color: rgb(230, 147, 247);
+}
