@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Whimsy</title>
 </head>
@@ -12,28 +13,20 @@
 <body>
 
     <header>
-        <div class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="./index.html"><img src="./assets/img/logowhimsy.gif" alt="Logo Whimsy"></a>
-                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <div class="navbar fixed-top navbar-expand-lg border-bottom">
+            <div class="container align-items-center">
+                <a href="./index.html"><img src="./assets/img/logowhimsy.gif" alt="logo whimsy" class="nav__img"></a>
+                <a href="index.html" class="nav__bag order-lg-last"><i class="bi bi-bag-heart"></i></a>
+                <button class="navbar-toggler order-first" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
                 </button>
-                <nav class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav container-fluid justify-content-evenly">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="#">productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">carrito</a>
-                        </li>
+                <nav class="collapse navbar-collapse justify-content-center" id="navmenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./pages/products.html">productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/about.html">nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./pages/contact.html">contacto</a></li>
                     </ul>
-                </nav>
+                </nav>  
             </div>
         </div>
     </header>
