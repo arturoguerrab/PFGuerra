@@ -1,10 +1,58 @@
-*{
+/* *{
     border: 1px solid greenyellow;
+} */
+a{
+    text-decoration: none;
+}
+
+/* ----Barra de Navegacion---- */
+
+.bi-list{
+    color: white;
+    font-size: 2rem;
+}
+.bi-bag-heart{
+    font-size: 1.8rem;
+    padding-left: 2.2rem;
+    color: white;
 }
 
 .navbar{
-    background-color: rgb(0, 0, 0);
+    --bs-navbar-padding-y: 0.5rem;
+    background-color: #1b1c1e;
 }
+
+.border-bottom{
+    --bs-border-color:rgb(236, 117, 207);
+    --bs-border-width:3px;
+}
+.navbar-toggler{
+    color: transparent;
+}
+
+.nav__img{
+    height: 4rem;
+    width: 4rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.nav-link{
+    --bs-nav-link-color: white;
+    --bs-navbar-active-color:rgb(236, 117, 207);
+}
+
+.active{
+    border-bottom: 1px solid rgb(236, 117, 207) ;
+}
+
+.nav-link:hover{
+    color: rgb(236, 117, 207);
+}
+
+
+/* ----Seccion Hero/Index---- */
 
 .hero{
     background-image: url(../assets/img/hero2.jpg);
