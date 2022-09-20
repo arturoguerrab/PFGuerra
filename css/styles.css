@@ -6,11 +6,11 @@ a{
 
 .bi-list{
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .bi-bag-heart{
-    font-size: 1.8rem;
-    padding-left: 2.2rem;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
     color: white;
 }
 
@@ -23,13 +23,14 @@ a{
     --bs-border-color:rgb(236, 117, 207);
     --bs-border-width:3px;
 }
+
 .navbar-toggler{
     color: transparent;
 }
 
 .nav__img{
-    height: 4rem;
-    width: 4rem;
+    height: 3rem;
+    width: 3rem;
     padding: 0;
     margin: 0;
     border: 0;
