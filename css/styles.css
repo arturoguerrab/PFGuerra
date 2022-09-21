@@ -125,7 +125,7 @@ main{
 
 .tarjeta{
     width: 320px;
-    height:87vh;;
+    height:600px;;
 }
 
 .tarjeta__img{
@@ -189,10 +189,6 @@ main{
     background-color: rgb(236, 117, 207);
 }
 
-.nosotros__container{
-    height: 91vh;
-}
-
 .nosotros__img{
     width: 250px;
     height: 350px;
@@ -218,7 +214,3 @@ main{
     text-align: center;
 }
 
-/* ----Seccion Datasheet/datasheet---- */
-.data__container{
-    height: 90vh;
-}
