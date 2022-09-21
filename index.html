@@ -7,11 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>Whimsy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch&family=Jost:wght@200&family=Lato:ital,wght@0,400;1,300&family=Montserrat+Alternates:wght@200&family=Old+Standard+TT:ital@0;1&family=Outfit:wght@200;400&family=Silkscreen&family=Staatliches&display=swap" rel="stylesheet">
+    <title>Whimsy - Home</title>
 </head>
-
 <body>
 
+    <!-- /* ----Barra de Navegacion---- */ -->
     <header>
         <div class="navbar fixed-top navbar-expand-lg border-bottom">
             <div class="container align-items-center">
@@ -30,29 +31,35 @@
             </div>
         </div>
     </header>
+    <!-- /* ----Barra de Navegacion---- */ -->
 
     <main>
 
-        <section class="container-fluid d-flex justify-content-center align-items-center hero">
-            <div class="container">
-                <div class="row">
-                    <h1 class="col-12 text-center">Whimsy<h1>
-                    <h2 class="col-12 text-center">Lorem, ipsum dolor.</h2>
+    <!-- /* ----Seccion Hero/Index---- */ -->
+        <section class="container-fluid d-flex align-items-center hero">
+            <div class="container w-50 text-center">
+                <div class="row bg-light bg-opacity-75">
+                    <h1 class="col-12">Whimsy<h1>
+                    <h2 class="col-12">Lorem, ipsum dolor.</h2>
                 </div>
             </div>
         </section>
+    <!-- /* ----Seccion Hero/Index---- */ -->
 
         <br>
 
+    <!-- /* ----Seccion gift/index---- */ -->
         <div class="container-fluid gift">
             <img src="./assets/img/shopnow.gif" alt="shopnow gift">
         </div>
+    <!-- /* ----Seccion gift/index---- */ -->
 
+    <!-- /* ----Seccion Tarjetas/index---- */ -->
         <section class="container-fluid">
             <div class="container">
                 <div class="row justify-content-center justify-content-lg-evenly">
                     <div class="d-flex flex-column justify-content-center gap-2 tarjeta">
-                        <a href="./pages/datasheet.html"><img class="tarjeta__img" src="./assets/img/tarjeta_a.jpg" alt="Vela"></a>
+                        <a href="./pages/datasheet.html"><img class="tarjeta__img" src="./assets/img/tarjeta_a.jpg" alt="Vela Producto"></a>
                         <h3 class="tarjeta__title">Producto</h3>
                         <div class="tarjeta__tipo text-center">
                             <a href="./pages/datasheet.html">Tipo</a>
@@ -62,7 +69,7 @@
                         <a class="tarjeta__btn align-self-center" href="./pages/datasheet.html">AÑADIR AL CARRITO<br>$XXXX,XX</a>
                     </div>
                     <div class="d-flex flex-column justify-content-center gap-2 tarjeta">
-                        <a href="./pages/datasheet.html"><img class="tarjeta__img" src="./assets/img/tarjeta_f.jpg" alt="Vela"></a>
+                        <a href="./pages/datasheet.html"><img class="tarjeta__img" src="./assets/img/tarjeta_f.jpg" alt="Vela Producto"></a>
                         <h3 class="tarjeta__title">Producto</h3>
                         <div class="tarjeta__tipo text-center">
                             <a href="./pages/datasheet.html">Tipo</a>
@@ -72,7 +79,7 @@
                         <a class="tarjeta__btn align-self-center" href="./pages/datasheet.html">AÑADIR AL CARRITO<br>$XXXX,XX</a>
                     </div>
                     <div class="d-flex flex-column justify-content-center gap-2 tarjeta">
-                        <a href="./pages/datasheet.html"><img class="tarjeta__img" src="./assets/img/tarjeta_c.jpg" alt="Vela"></a>
+                        <a href="./pages/datasheet.html"><img class="tarjeta__img" src="./assets/img/tarjeta_c.jpg" alt="Vela Producto"></a>
                         <h3 class="tarjeta__title">Producto</h3>
                         <div class="tarjeta__tipo text-center">
                             <a href="./pages/datasheet.html">Tipo</a>
@@ -82,7 +89,7 @@
                         <a class="tarjeta__btn align-self-center" href="./pages/datasheet.html">AÑADIR AL CARRITO<br>$XXXX,XX</a>
                     </div>
                     <div class="d-none d-lg-none d-md-flex flex-column justify-content-center gap-2 tarjeta">
-                        <a href="./pages/datasheet.html"><img class="tarjeta__img" src="./assets/img/tarjeta_d.jpg" alt="Vela"></a>
+                        <a href="./pages/datasheet.html"><img class="tarjeta__img" src="./assets/img/tarjeta_d.jpg" alt="Vela Producto"></a>
                         <h3 class="tarjeta__title">Producto</h3>
                         <div class="tarjeta__tipo text-center">
                             <a href="./pages/datasheet.html">Tipo</a>
@@ -94,7 +101,9 @@
                 </div>
             </div>      
         </section>
+    <!-- /* ----Seccion Tarjetas/index---- */ -->
 
+    <!-- /* ----Seccion Nosotros/index---- */ -->
         <section class="container-fluid nosotros__index">
             <div class="container nosotros__container">
                 <div class="row justify-content-center align-items-center">
@@ -103,7 +112,7 @@
                     </div>
                     <div class="col-12 col-lg-6 pt-4">
                         <div class="text-center text-lg-start">
-                            <h2>Titulo</h2>
+                            <h2 class="display-1">Titulo</h2>
                             <h3>subtitulo</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum mollitia repudiandae, aliquam doloremques</p>
                             <button class="tarjeta__btn">ver mas</button>
@@ -113,11 +122,11 @@
                 <br>
             </div>
         </section>
-
-
+    <!-- /* ----Seccion Nosotros/index---- */ -->
 
     </main>
 
+    <!-- /* ----Footer---- */ -->
     <footer>
         <div class="container-fluid footer__container">
             <div class="container d-flex flex-column align-items-center">
@@ -137,9 +146,9 @@
                 <span class="text-center">WHIMSY 2022 | Todos los derechos reservados<br/>powered by Arturo Guerra</span>
             </div>
         </div>
-
     </footer>
-    
+    <!-- /* ----Footer---- */ -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* ----Reinicio---- */
 a{
     text-decoration: none;
 }
@@ -8,6 +9,29 @@ hr{
 
 main{
     margin-top: 80px;
+}
+
+/* ----Fonts---- */
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 6rem;
+}
+h2 {
+    font-family: 'Silkscreen', cursive; 
+    font-size: 2rem;
+}
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+}
+h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 2.5rem;
+}
+span {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 0.8rem;
 }
 
 /* ----Barra de Navegacion---- */
@@ -121,7 +145,7 @@ main{
     outline: none;
 }
 
-/* ----Seccion Tarjetas/index---- */
+/* ----Seccion Tarjetas/index/products/about/---- */
 
 .tarjeta{
     width: 320px;
@@ -172,7 +196,7 @@ main{
     height: 50%;
 }
 
-/* ----Seccion gift/index */
+/* ----Seccion gift/index---- */
 .gift{
     background-color: rgb(236, 117, 207);
     overflow: hidden;
@@ -184,7 +208,7 @@ main{
     }
 }
 
-/* ----Seccion Nosotros/index */
+/* ----Seccion Nosotros/index---- */
 .nosotros__index{
     background-color: rgb(236, 117, 207);
 }
@@ -208,18 +232,13 @@ main{
     }
 }
 
-/* ----Seccion Productos/products */
+/* ----Seccion Productos span/products----*/
 .span__promo{
     background-color: rgb(236, 117, 207);
     text-align: center;
 }
 
 /* ----Seccion Contacto/contact---- */
-
-/* .contacto__fluid{
-    background-image: url(../assets/img/hero_img.jpg);
-    background-size: cover;
-} */
 
 .contacto__container{
     padding: 100px 0px 100px 0px;
@@ -261,6 +280,11 @@ main{
     outline: none;
 }
 
+.form__btn{
+    background-color: #2b2b2b;
+    color: white;
+}
+
 /* ----Seccion nosotros/about---- */
 
 .about__img{
@@ -272,6 +296,7 @@ main{
     background-image: url(../assets/img/hero_img.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 .abouta__fluid{
