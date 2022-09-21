@@ -32,6 +32,47 @@
     </header>
 
     <main>
+        <section class="container-fluid contacto__fluid">
+            <div class="container contacto__container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1>Titulo</h1>
+                        <h2>subtitulo</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At labore mollitia eos doloremque maiores velit magni quaerat dolore laboriosam nesciunt?</p>
+                        <div class="contact__icons ">
+                            <a href="https://github.com/arturoguerrab" target="_blank" class="p-2"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/arturoguerrab" target="_blank" class="p-2"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/arturoguerrab" target="_blank" class="p-2"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pt-5 pt-lg-0">
+                        <h2>Subtitulo</h2>
+                        <form action="">
+                            <div class="row form__estilos">
+                                <label for="nombre" class="col-4">Nombre</label>
+                                <input type="text" id="nombre" class="col-12" required>
+                            </div>
+                            <div class="row form__estilos pt-3">
+                                <label for="email" class="col-4">Correo electronico</label>
+                                <input type="email" id="email" class="col-12" required>
+                            </div>
+                            <div class="row form__estilos pt-3">
+                                <label for="telefono" class="col-4">Telefono</label>
+                                <input type="tel" id="telefono" class="col-12" required>
+                            </div>
+                            <div class="row pb-3 form__estilos pt-3">
+                                <label for="mensaje" class="col-4">Mensaje</label>
+                                <textarea name="" id="mensaje" cols="30" rows="5" class="col-12"></textarea>
+                            </div>
+                            <div class="row pt-5 justify-content-evenly">
+                                <input type="submit" id="submit" class="col-4">
+                                <input type="reset" id="reset" class="col-4">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
@@ -39,11 +80,6 @@
         <div class="container-fluid footer__container">
             <div class="container d-flex flex-column align-items-center">
                 <img class="footer__img" src="../assets/img/logofooter.png" alt="logo whimsy">
-                <div class="footer__icons d-flex justify-content-center gap-5">
-                    <a href="https://github.com/arturoguerrab" target="_blank"><i class="bi bi-github"></i></a>
-                    <a href="https://www.linkedin.com/in/arturoguerrab" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="https://www.instagram.com/arturoguerrab" target="_blank"><i class="bi bi-instagram"></i></a>
-                </div>
                 <hr/>
                 <form class="footer__form d-flex flex-column align-items-center gap-2" action="">
                     <label for="suscribite">SUSCRIBíTE A NUESTRO NEWSLETTER</label>
