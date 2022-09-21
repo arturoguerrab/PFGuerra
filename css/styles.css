@@ -5,34 +5,45 @@ a{
     text-decoration: none;
 }
 
+hr{
+    color: white;
+}
 /* ----Barra de Navegacion---- */
 
 .bi-list{
+    font-size: 32px;
     color: white;
-    font-size: 2rem;
 }
 .bi-bag-heart{
-    font-size: 1.8rem;
-    padding-left: 2.2rem;
+    font-size: 28.8px;
+    padding-left: 35.2px;
+}
+
+.nav__bag{
     color: white;
 }
 
+.nav__bag:hover{
+    color: rgb(236, 117, 207);
+}
+
 .navbar{
-    --bs-navbar-padding-y: 0.5rem;
-    background-color: #1b1c1e;
+    --bs-navbar-padding-y: 8px;
+    background-color: #2b2b2b;
 }
 
 .border-bottom{
     --bs-border-color:rgb(236, 117, 207);
     --bs-border-width:3px;
 }
+
 .navbar-toggler{
-    color: transparent;
+    border: none;
 }
 
 .nav__img{
-    height: 4rem;
-    width: 4rem;
+    height: 64px;
+    width: 64px;
     padding: 0;
     margin: 0;
     border: 0;
@@ -51,6 +62,62 @@ a{
     color: rgb(236, 117, 207);
 }
 
+/* ----Footer---- */
+
+.footer__container{
+    background-color: #2b2b2b;
+    color: white;
+    padding: 20px;
+
+}
+
+.footer__img {
+    width: 280px;
+}
+
+.footer__icons{
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.footer__icons i{
+    color: white;
+}
+
+.footer__icons i:hover{
+    color: rgb(236, 117, 207) ;
+}
+
+.footer__form button{
+    width: 40%;
+    background-color: transparent;
+    border: 1px solid rgb(236, 117, 207);
+    color: white;
+
+}
+
+.footer__form button:hover{
+    background-color: rgb(236, 117, 207);
+
+    
+}
+
+.footer__form label{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.footer__form input{
+    width: 80%;
+    color: white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(236, 117, 207);
+}
+
+.footer__form input:focus{
+    outline: none;
+}
 
 /* ----Seccion Hero/Index---- */
 
