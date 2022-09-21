@@ -5,6 +5,11 @@ a{
 hr{
     color: white;
 }
+
+main{
+    margin-top: 80px;
+}
+
 /* ----Barra de Navegacion---- */
 
 .bi-list{
@@ -167,6 +172,7 @@ hr{
     height: 50%;
 }
 
+/* ----Seccion gift/index */
 .gift{
     background-color: rgb(236, 117, 207);
     overflow: hidden;
@@ -178,11 +184,41 @@ hr{
     }
 }
 
+/* ----Seccion Nosotros/index */
 .nosotros__index{
     background-color: rgb(236, 117, 207);
 }
 
+.nosotros__container{
+    height: 91vh;
+}
+
 .nosotros__img{
-    width: 380px;
-    height: 500px;
+    width: 250px;
+    height: 350px;
+}
+
+@media (min-width: 768px){
+    .nosotros__img{
+        width: 380px;
+        height: 520px;
+    }
+}
+
+@media (min-width:992px){
+    .nosotros__img{
+        width: 380px;
+        height: 700px;
+    }
+}
+
+/* ----Seccion Productos/products */
+.span__promo{
+    background-color: rgb(236, 117, 207);
+    text-align: center;
+}
+
+/* ----Seccion Datasheet/datasheet---- */
+.data__container{
+    height: 90vh;
 }
