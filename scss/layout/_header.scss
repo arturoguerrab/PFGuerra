@@ -1,6 +1,6 @@
 .bi-list{
     font-size: 32px;
-    color: white;
+    color: $color-light;
 }
 .bi-bag-heart{
     font-size: 28.8px;
@@ -8,20 +8,20 @@
 }
 
 .nav__bag{
-    color: white;
+    color:$color-light;
 }
 
 .nav__bag:hover{
-    color: rgb(236, 117, 207);
+    color:$color-components;
 }
 
 .navbar{
     --bs-navbar-padding-y: 8px;
-    background-color: #2b2b2b;
+    background-color:$color-dark;
 }
 
 .border-bottom{
-    --bs-border-color:rgb(236, 117, 207);
+    --bs-border-color:#c097ea;
     --bs-border-width:3px;
 }
 
@@ -38,14 +38,14 @@
 }
 
 .nav-link{
-    --bs-nav-link-color: white;
-    --bs-navbar-active-color:rgb(236, 117, 207);
+    --bs-nav-link-color: #e6e2df;
+    --bs-navbar-active-color:#c097ea;
 }
 
 .active{
-    border-bottom: 1px solid rgb(236, 117, 207) ;
+    border-bottom: 1px solid $color-components ;
 }
 
 .nav-link:hover{
-    color: rgb(236, 117, 207);
+    color: $color-components;
 }
