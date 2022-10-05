@@ -1,0 +1,51 @@
+.bi-list{
+    font-size: 32px;
+    color: white;
+}
+.bi-bag-heart{
+    font-size: 28.8px;
+    padding-left: 35.2px;
+}
+
+.nav__bag{
+    color: white;
+}
+
+.nav__bag:hover{
+    color: rgb(236, 117, 207);
+}
+
+.navbar{
+    --bs-navbar-padding-y: 8px;
+    background-color: #2b2b2b;
+}
+
+.border-bottom{
+    --bs-border-color:rgb(236, 117, 207);
+    --bs-border-width:3px;
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+.nav__img{
+    height: 64px;
+    width: 64px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.nav-link{
+    --bs-nav-link-color: white;
+    --bs-navbar-active-color:rgb(236, 117, 207);
+}
+
+.active{
+    border-bottom: 1px solid rgb(236, 117, 207) ;
+}
+
+.nav-link:hover{
+    color: rgb(236, 117, 207);
+}

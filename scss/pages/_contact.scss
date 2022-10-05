@@ -1,0 +1,49 @@
+.contacto__container{
+    padding: 100px 0px 100px 0px;
+}
+
+.contact__icons{
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.contact__icons i{
+    color: #2b2b2b;
+}
+
+.contact__icons i:hover{
+    color: rgb(236, 117, 207) ;
+}
+
+.form__estilos{
+    border-bottom: 2px solid #2b2b2b;
+}
+
+.form__estilos input{
+    border: none;
+    background: transparent;
+}
+
+.form__estilos textarea{
+    border: none;
+    background: transparent;
+}
+
+.form__estilos input:focus{
+    outline: none;
+    
+}
+
+.form__estilos textarea:focus{
+    outline: none;
+}
+
+.form__btn{
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.form__btn:hover{
+    
+    color: rgb(236, 117, 207);
+}
