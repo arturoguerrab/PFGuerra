@@ -1,5 +1,7 @@
-.hero__one{
-    background-image: url(../assets/img/tarjeta_b.jpg);
+//Seccion gift/index
+
+.hero{
+    background-image: url(../../assets/img/hero_img.jpg);
     height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,46 +12,34 @@
     height: 50%;
 }
 
+// Seccion gift/index
+
 .gift{
-    background-color: rgb(236, 117, 207);
+    height: 48px;
+    margin-top: 18px;
+    background-color:$color-acento;
     overflow: hidden;
-}
-
-@media (min-width: 992px) {
-    .gift img{
-        width: 100%;
+    img {
+        @include media-lg{
+            width: 100%;
+        }
     }
 }
 
-.nosotros__index{
-    background-color: rgb(236, 117, 207);
-}
+//Seccion Nosotros/index
 
-.nosotros__img{
-    width: 250px;
-    height: 350px;
-}
-
-@media (min-width: 768px){
-    .nosotros__img{
-        width: 380px;
-        height: 520px;
+.nosotros{
+    background-color: $color-components;
+    &__img{
+        width: 250px;
+        height: 350px;
+        @include media-md{
+            width: 380px;
+            height: 520px;
+        }
+        @include media-lg{
+            width: 380px;
+            height: 700px;
+        }
     }
-}
-
-@media (min-width:992px){
-    .nosotros__img{
-        width: 380px;
-        height: 700px;
-    }
-}
-
-.nosotros__btn{
-    background-color: #2b2b2b;
-    color: rgb(255, 255, 255);
-    padding: 10px;
-}
-
-.nosotros__btn:hover{
-    color: rgb(236, 117, 207);
 }

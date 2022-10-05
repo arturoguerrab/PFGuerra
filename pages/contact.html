@@ -37,8 +37,8 @@
     <main>
 
     <!-- /* ----Seccion Contacto/contact---- */ -->
-        <section class="container-fluid contacto__fluid">
-            <div class="container contacto__container">
+        <section class="container-fluid">
+            <div class="container contact">
                 <div class="row">
                     <div class="col-lg-6">
                         <h1>Titulo</h1>
@@ -70,8 +70,8 @@
                                 <textarea name="" id="mensaje" placeholder="Tu mensaje aqui..." cols="30" rows="5" class="col-12"></textarea>
                             </div>
                             <div class="row pt-5 justify-content-evenly">
-                                <input type="submit" id="submit" class="col-4 form__btn">
-                                <input type="reset" id="reset" class="col-4 form__btn">
+                                <input type="submit" id="submit" class="col-4 btn__form">
+                                <input type="reset" id="reset" class="col-4 btn__form">
                             </div>
                         </form>
                     </div>
@@ -84,16 +84,14 @@
 
     <!-- /* ----Footer---- */ -->
     <footer>
-        <div class="container-fluid footer__container">
+        <div class="container-fluid footer">
             <div class="container d-flex flex-column align-items-center">
                 <img class="footer__img" src="../assets/img/logofooter.png" alt="logo whimsy">
-                <hr/>
                 <form class="footer__form d-flex flex-column align-items-center gap-2" action="">
                     <label for="suscribite">SUSCRIBíTE A NUESTRO NEWSLETTER</label>
                     <input class="text-center" type="email" id="suscribite" placeholder="Ingresá tu email" required>
-                    <button type="submit">SUSCRIBITE</button>
+                    <button class="btn__footer" type="submit">SUSCRIBITE</button>
                 </form>
-                <hr/>
                 <span class="text-center">WHIMSY 2022 | Todos los derechos reservados<br/>powered by Arturo Guerra</span>
             </div>
         </div>

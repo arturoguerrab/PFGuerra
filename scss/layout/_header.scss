@@ -7,12 +7,20 @@
     padding-left: 35.2px;
 }
 
-.nav__bag{
-    color:$color-light;
-}
-
-.nav__bag:hover{
-    color:$color-components;
+.nav{
+    &__bag{
+        color:$color-light;
+        &:hover{
+            color:$color-acento;
+        }
+    }
+    &__img{
+        height: 64px;
+        width: 64px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
 }
 
 .navbar{
@@ -29,23 +37,14 @@
     border: none;
 }
 
-.nav__img{
-    height: 64px;
-    width: 64px;
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
 .nav-link{
     --bs-nav-link-color: #e6e2df;
     --bs-navbar-active-color:#c097ea;
+    &:hover{
+        color: $color-acento;
+    }
 }
 
 .active{
     border-bottom: 1px solid $color-components ;
-}
-
-.nav-link:hover{
-    color: $color-components;
 }

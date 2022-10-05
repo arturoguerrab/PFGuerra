@@ -2,12 +2,12 @@ a {
   text-decoration: none;
 }
 
-hr {
-  color: white;
-}
-
 main {
   margin-top: 80px;
+}
+
+body {
+  background-color: #e6e2df;
 }
 
 h1 {
@@ -48,9 +48,15 @@ span {
 .nav__bag {
   color: #e6e2df;
 }
-
 .nav__bag:hover {
-  color: #c097ea;
+  color: #ec75cf;
+}
+.nav__img {
+  height: 64px;
+  width: 64px;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 .navbar {
@@ -67,122 +73,114 @@ span {
   border: none;
 }
 
-.nav__img {
-  height: 64px;
-  width: 64px;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
 .nav-link {
   --bs-nav-link-color: #e6e2df;
   --bs-navbar-active-color:#c097ea;
+}
+.nav-link:hover {
+  color: #ec75cf;
 }
 
 .active {
   border-bottom: 1px solid #c097ea;
 }
 
-.nav-link:hover {
-  color: #c097ea;
-}
-
-.footer__container {
-  background-color: #2b2b2b;
-  color: white;
+.footer {
+  background-color: #2a2828;
+  color: #e6e2df;
   padding: 20px;
 }
-
 .footer__img {
-  width: 280px;
+  width: 200px;
 }
-
 .footer__icons {
-  font-size: 30px;
-  padding-top: 10px;
+  font-size: 25px;
+  padding: 10px;
 }
-
 .footer__icons i {
-  color: white;
+  color: #e6e2df;
 }
-
 .footer__icons i:hover {
-  color: rgb(236, 117, 207);
+  color: #ec75cf;
 }
-
-.footer__form button {
-  width: 40%;
-  background-color: transparent;
-  border: 1px solid rgb(236, 117, 207);
-  color: white;
-}
-
-.footer__form button:hover {
-  background-color: rgb(236, 117, 207);
-}
-
 .footer__form label {
   font-size: 1.2rem;
   text-align: center;
 }
-
 .footer__form input {
   width: 80%;
-  color: white;
+  color: #e6e2df;
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgb(236, 117, 207);
+  border-bottom: 1px solid #c097ea;
 }
-
 .footer__form input:focus {
   outline: none;
 }
 
-.tarjeta {
-  width: 320px;
-  height: 600px;
-}
-
-.tarjeta__img {
-  width: 100%;
-  height: 300px;
-}
-
-.tarjeta__title {
-  text-align: center;
-}
-
-.tarjeta__tipo {
-  margin-bottom: 10px;
-}
-
-.tarjeta__tipo a {
-  padding: 5px;
-  margin: 7px;
-  border: 1px solid #2b2b2b;
-  color: black;
-}
-
-.tarjeta__tipo a:hover {
-  background-color: #2b2b2b;
-  color: rgb(236, 117, 207);
-}
-
-.tarjeta__btn {
+.btn__tarjeta {
   text-align: center;
   width: 100%;
   padding: 10px;
   background-color: #2b2b2b;
-  color: white;
+  color: #e6e2df;
+}
+.btn__tarjeta:hover {
+  color: #ec75cf;
+}
+.btn__nosotros {
+  background-color: #2a2828;
+  color: #e6e2df;
+  padding: 10px;
+}
+.btn__nosotros:hover {
+  color: #ec75cf;
+}
+.btn__form {
+  background-color: #2a2828;
+  color: #e6e2df;
+}
+.btn__form:hover {
+  color: #ec75cf;
+}
+.btn__footer {
+  width: 40%;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid #c097ea;
+  color: #e6e2df;
+}
+.btn__footer:hover {
+  background-color: #ec75cf;
 }
 
-.tarjeta__btn:hover {
-  color: rgb(236, 117, 207);
+.tarjeta {
+  width: 320px;
+  height: 520px;
+}
+.tarjeta__img {
+  width: 100%;
+  height: 300px;
+}
+.tarjeta__title {
+  text-align: center;
+}
+.tarjeta__tipo {
+  margin-bottom: 10px;
+}
+.tarjeta__tipo a {
+  padding: 5px;
+  margin: 7px;
+  border: 1px solid #2a2828;
+  color: #2a2828;
+}
+.tarjeta__tipo a:hover {
+  background-color: #2a2828;
+  color: #ec75cf;
 }
 
-.hero__one {
-  background-image: url(../assets/img/tarjeta_b.jpg);
+.hero {
+  background-image: url(../../assets/img/hero_img.jpg);
   height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -194,24 +192,24 @@ span {
 }
 
 .gift {
-  background-color: rgb(236, 117, 207);
+  height: 48px;
+  margin-top: 18px;
+  background-color: #ec75cf;
   overflow: hidden;
 }
-
 @media (min-width: 992px) {
   .gift img {
     width: 100%;
   }
 }
-.nosotros__index {
-  background-color: rgb(236, 117, 207);
-}
 
+.nosotros {
+  background-color: #c097ea;
+}
 .nosotros__img {
   width: 250px;
   height: 350px;
 }
-
 @media (min-width: 768px) {
   .nosotros__img {
     width: 380px;
@@ -224,30 +222,14 @@ span {
     height: 700px;
   }
 }
-.nosotros__btn {
-  background-color: #2b2b2b;
-  color: rgb(255, 255, 255);
-  padding: 10px;
-}
-
-.nosotros__btn:hover {
-  color: rgb(236, 117, 207);
-}
 
 .about__img {
   width: 400px;
   height: 500px;
 }
 
-.about__bg {
-  background-image: url(../assets/img/hero_img.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 .abouta__fluid {
-  background-color: white;
+  background-color: #e6e2df;
 }
 
 .aboutb__fluid {
@@ -255,60 +237,44 @@ span {
 }
 
 .about__two {
-  background-color: rgba(43, 43, 43, 0.7607843137);
-  color: white;
+  background-color: #2a2828;
+  color: #e6e2df;
 }
 
-.contacto__container {
+.contact {
   padding: 100px 0px 100px 0px;
 }
-
 .contact__icons {
   font-size: 30px;
   padding-top: 10px;
 }
-
 .contact__icons i {
   color: #2b2b2b;
 }
-
 .contact__icons i:hover {
-  color: rgb(236, 117, 207);
+  color: #ec75cf;
 }
 
 .form__estilos {
   border-bottom: 2px solid #2b2b2b;
 }
-
 .form__estilos input {
   border: none;
   background: transparent;
 }
-
+.form__estilos input:focus {
+  outline: none;
+}
 .form__estilos textarea {
   border: none;
   background: transparent;
 }
-
-.form__estilos input:focus {
-  outline: none;
-}
-
 .form__estilos textarea:focus {
   outline: none;
 }
 
-.form__btn {
-  background-color: #2b2b2b;
-  color: white;
-}
-
-.form__btn:hover {
-  color: rgb(236, 117, 207);
-}
-
 .span__promo {
-  background-color: rgb(236, 117, 207);
+  background-color: #ec75cf;
   text-align: center;
 }
 

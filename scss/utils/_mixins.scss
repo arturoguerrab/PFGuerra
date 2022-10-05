@@ -1,0 +1,17 @@
+@mixin media-sm{
+    @media (min-width: 576px){
+        @content
+    }
+}
+
+@mixin media-md{
+    @media (min-width: 768px){
+        @content
+    }
+}
+
+@mixin media-lg{
+    @media (min-width: 992px){
+        @content
+    }
+}
