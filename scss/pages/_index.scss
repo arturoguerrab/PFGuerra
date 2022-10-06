@@ -1,11 +1,17 @@
 //Seccion gift/index
 
 .hero{
-    background-image: url(../../assets/img/hero_img.jpg);
+    background-image: url(../../assets/img/hero-sm.jpg);
     height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    @include media-sm{
+        background-image: url(../../assets/img/hero-md.jpg);
+    }
+    @include media-md{
+        background-image: url(../../assets/img/hero-lg.jpg);
+    }
 }
 
 .hero__container{

@@ -180,11 +180,21 @@ span {
 }
 
 .hero {
-  background-image: url(../../assets/img/hero_img.jpg);
+  background-image: url(../../assets/img/hero-sm.jpg);
   height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (min-width: 576px) {
+  .hero {
+    background-image: url(../../assets/img/hero-md.jpg);
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    background-image: url(../../assets/img/hero-lg.jpg);
+  }
 }
 
 .hero__container {
