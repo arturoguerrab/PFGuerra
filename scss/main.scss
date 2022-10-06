@@ -1,6 +1,5 @@
 //UTILS
 @import "./utils/variables";
-@import "./utils/functions";
 @import "./utils/mixins";
 
 //BASE
@@ -10,12 +9,10 @@
 //LAYOUT
 @import "./layout/header";
 @import "./layout/footer";
-@import "./layout/forms";
 
 //COMPONENTS
 @import "./components/buttons";
 @import "./components/card";
-@import "./components/carousel";
 
 //PAGES
 @import "./pages/index";

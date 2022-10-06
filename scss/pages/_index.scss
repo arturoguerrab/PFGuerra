@@ -20,6 +20,7 @@
     background-color:$color-acento;
     overflow: hidden;
     img {
+        height: 90%;
         @include media-lg{
             width: 100%;
         }
