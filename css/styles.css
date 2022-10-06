@@ -6,6 +6,10 @@ main {
   margin-top: 80px;
 }
 
+body {
+  background-color: #e6e2df;
+}
+
 h1 {
   font-family: "Bebas Neue", cursive;
   font-size: 4.5rem;
