@@ -118,27 +118,20 @@ span {
   outline: none;
 }
 
-.btn__tarjeta {
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-  background-color: #2b2b2b;
+.btn, .btn__footer, .btn__form, .btn__nosotros, .btn__tarjeta {
   color: #e6e2df;
+  background-color: #2a2828;
+  text-align: center;
+  padding: 7px;
+}
+.btn__tarjeta {
+  width: 100%;
 }
 .btn__tarjeta:hover {
   color: #ec75cf;
 }
-.btn__nosotros {
-  background-color: #2a2828;
-  color: #e6e2df;
-  padding: 10px;
-}
 .btn__nosotros:hover {
   color: #ec75cf;
-}
-.btn__form {
-  background-color: #2a2828;
-  color: #e6e2df;
 }
 .btn__form:hover {
   color: #ec75cf;
@@ -148,7 +141,6 @@ span {
   margin-bottom: 10px;
   background-color: transparent;
   border: 1px solid #c097ea;
-  color: #e6e2df;
 }
 .btn__footer:hover {
   background-color: #ec75cf;

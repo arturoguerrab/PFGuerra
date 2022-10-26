@@ -1,11 +1,12 @@
 .btn{
+    color: $color-light;
+    background-color: $color-dark;
+    text-align: center;
+    padding: 7px;
 
     &__tarjeta{
-        text-align: center;
+        @extend .btn;
         width: 100%;
-        padding: 10px;
-        background-color: #2b2b2b;
-        color: $color-light;
         &:hover{
             color: $color-acento;
         }
@@ -13,28 +14,25 @@
     
 
     &__nosotros{
-        background-color: $color-dark;
-        color: $color-light;
-        padding: 10px;
+        @extend .btn;
         &:hover{
             color: $color-acento;
         }
     }
 
     &__form{
-        background-color: $color-dark;
-        color: $color-light;
+        @extend .btn;
         &:hover{
             color: $color-acento;
         }
     }
 
     &__footer{
+        @extend .btn;
         width: 40%;
         margin-bottom: 10px;
         background-color: transparent;
         border: 1px solid $color-components;
-        color: $color-light;
         &:hover{
             background-color: $color-acento;
         }

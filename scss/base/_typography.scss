@@ -1,20 +1,20 @@
 h1 {
-    font-family: 'Bebas Neue', cursive;
+    font-family: $font-titulos;
     font-size: 4.5rem;
 }
 h2 {
-    font-family: 'Silkscreen', cursive; 
+    font-family: $font-subtitulos; 
     font-size: 2rem;
 }
 p {
-    font-family: 'Lato', sans-serif;
+    font-family: $font-parrafos;
     font-size: 1rem;
 }
 h3 {
-    font-family: 'Chakra Petch', sans-serif;
+    font-family:$font-titulosh;
     font-size: 2rem;
 }
 span {
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family:$font-span;
     font-size: 0.8rem;
 }
