@@ -180,7 +180,7 @@ span {
 }
 
 .hero {
-  background-image: url(../../assets/img/hero-sm.jpg);
+  background-image: url(../assets/img/hero-sm.jpg);
   height: 91vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -188,12 +188,12 @@ span {
 }
 @media (min-width: 576px) {
   .hero {
-    background-image: url(../../assets/img/hero-md.jpg);
+    background-image: url(../assets/img/hero-md.jpg);
   }
 }
 @media (min-width: 768px) {
   .hero {
-    background-image: url(../../assets/img/hero-lg.jpg);
+    background-image: url(../assets/img/hero-lg.jpg);
   }
 }
 
