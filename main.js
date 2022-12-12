@@ -10,14 +10,9 @@ function montoCuota(total,cuotas){
     return montoCuota;
 }
 
-function sumarCantidad (precio,cantidad){
-    let totalPrecio=precio*cantidad;
-    return totalPrecio;
-}
-
 function validacion(entrada,rangoMin,rangoMax,mensaje){
 
-    if(isNaN(entrada)==false && entrada>rangoMin && entrada<rangoMax){
+    if(isNaN(entrada)==false && entrada>rangoMin && entrada<=rangoMax){
         return true;
     }
     else{
@@ -25,20 +20,36 @@ function validacion(entrada,rangoMin,rangoMax,mensaje){
         return false;
     }
 }
+
+class Producto{
+    constructor (nombre,precio,stock){
+        this.nombre=nombre;
+        this.precio=precio;
+        this.stockReal=stock;
+        this.stockInicial=stock;
+    }
+    descontarStock (cantidad){
+        this.stockReal= this.stockReal-cantidad;
+    }
+    
+}
+
+function precioFinal (cantidad,precio){
+    return cantidad*precio;
+}
+
 // ---------DEFINICION DE LAS FUNCIONES----------
 
 // ---------DEFINICION DE VARIABLES-----------
 
 // CONSTANTES
-const productoUno=790.00;
-const productoDos=860.00;
-const productoTres=630.00;
+const productoUno = new Producto("Anamorphine",790.00,150);
+const productoDos = new Producto("Euphoriasme",860.00,102);
+const productoTres = new Producto("Anthurium",630.00,95);
+const carrito=[];
 const interes=0.05;
 
 // CONTADORES
-let cantidadUno=0;
-let cantidadDos=0;
-let cantidadTres=0;
 let totalParcial=0;
 
 // SELECCION DEL USUARIO
@@ -52,6 +63,7 @@ let confirmaPago;
 // OPERACIONES FINALES
 let totalCompra;
 let valorCuota;
+let listaCarrito="";
 
 // ---------DEFINICION DE VARIABLES-----------
 
@@ -60,71 +72,96 @@ let valorCuota;
 // ---------SECCION CARRITO DE COMPRAS-------
 do{
     do{
-        seleccion = parseInt(prompt(`eSHOP:\nEscribe el número del producto que deseas agregar al carrito:\n1. Aromática Anamorphine - $${productoUno}\n2. Aromática Euphoriasme - $${productoDos}\n3. Aromática Anthurium - $${productoTres}`));
+        seleccion = parseInt(prompt(`eSHOP:\nEscribe el número del producto que deseas agregar al carrito:\n1. Aromática ${productoUno.nombre} - $${productoUno.precio} (Stock: ${productoUno.stockReal})\n2. Aromática ${productoDos.nombre} - $${productoDos.precio} (Stock: ${productoDos.stockReal})\n3. Aromática ${productoTres.nombre} - $${productoTres.precio} (Stock: ${productoTres.stockReal})`));
     }
-    while(validacion(seleccion,0,4,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+    while(validacion(seleccion,0,3,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
 
-    if(seleccion==1){
-
-        do{
-            cantidad = parseInt(prompt(`La Aromática Anamorphine tiene un valor de $${productoUno}\n¿Qué cantidad deseas agregar al carrito? (Máximo 10 unidades)`));
-        } while(validacion(cantidad,0,11,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
-
-        totalParcial= totalParcial+sumarCantidad(productoUno,cantidad);
-        cantidadUno=cantidadUno + cantidad;
-
-    } else if(seleccion==2){
+    if(seleccion==1 && productoUno.stockReal>0){
 
         do{
-            cantidad = parseInt(prompt(`La Aromática Euphoriasme tiene un valor de $${productoDos}\n¿Qué cantidad deseas agregar al carrito? (Máximo 10 unidades)`));
-        } while(validacion(cantidad,0,11,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+            cantidad = parseInt(prompt(`La Aromática ${productoUno.nombre} tiene un valor de $${productoUno.precio}\n¿Qué cantidad deseas agregar al carrito? (Stock:${productoUno.stockReal})`));
+        } while(validacion(cantidad,0,productoUno.stockReal,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
 
-        totalParcial= totalParcial+sumarCantidad(productoDos,cantidad);
-        cantidadDos=cantidadDos + cantidad;
+        productoUno.descontarStock(cantidad);
+
+        if (carrito.includes(productoUno)==false){
+            carrito.push(productoUno);
+        }
+
         
-    } else{
+
+    } else if(seleccion==2 && productoDos.stockReal>0){
 
         do{
-            cantidad = parseInt(prompt(`La Aromática Anthurium tiene un valor de $${productoTres}\n¿Qué cantidad deseas agregar al carrito? (Máximo 10 unidades)`));
-        } while(validacion(cantidad,0,11,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+            cantidad = parseInt(prompt(`La Aromática ${productoDos.nombre} tiene un valor de $${productoDos.precio}\n¿Qué cantidad deseas agregar al carrito? (Stock:${productoDos.stockReal})`));
+        } while(validacion(cantidad,0,productoDos.stockReal,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
 
-        totalParcial= totalParcial+sumarCantidad(productoTres,cantidad);
-        cantidadTres=cantidadTres + cantidad;
+        productoDos.descontarStock(cantidad);
 
+        if (carrito.includes(productoDos)==false){
+            carrito.push(productoDos);
+        }
+
+        
+    } else if(seleccion==3 && productoTres.stockReal>0) {
+
+        do{
+            cantidad = parseInt(prompt(`La Aromática ${productoTres.nombre} tiene un valor de $${productoTres.precio}\n¿Qué cantidad deseas agregar al carrito? (Stock:${productoTres.stockReal})`));
+        } while(validacion(cantidad,0,productoTres.stockReal,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+
+        productoTres.descontarStock(cantidad);
+
+        if (carrito.includes(productoTres)==false){
+            carrito.push(productoTres);
+        }
+
+
+    }else{
+        alert("El producto seleccionado no posee stock disponible.");
     }
+        carrito.forEach((Producto)=>(
+            listaCarrito= listaCarrito + `${Producto.nombre} - $${precioFinal(Producto.stockInicial-Producto.stockReal,Producto.precio)}\n`))
         do {
-            agrega = parseInt(prompt(`CARRITO:\nAromática Anamorphine - ${cantidadUno}\nAromática Euphoriasme - ${cantidadDos}\nAromática Anthurium - ${cantidadTres}\nEl total de tu compra es de: $${totalParcial}\n¿Deseas agregar algo más?\n 1. Sí - 2. No`));
-        } while(validacion(agrega,0,3,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+                
+            agrega = parseInt(prompt(`CARRITO:\n${listaCarrito}\n¿Deseas agregar algo más?\n 1. Sí - 2. No`));
+            
+            if(agrega==1){
+                listaCarrito="";
+            }
+        } while(validacion(agrega,0,2,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
 
 }while(agrega==1);
 
 // ---------SECCION CARRITO DE COMPRAS-------
 
 //----------SECCION METODO DE PAGO---------
-do {
 
+totalParcial = precioFinal(productoUno.stockInicial-productoUno.stockReal,productoUno.precio) + precioFinal(productoDos.stockInicial-productoDos.stockReal,productoDos.precio) + precioFinal(productoTres.stockInicial-productoTres.stockReal,productoTres.precio);
+
+do {
+    
     metodoPago = parseInt(prompt(`MÉTODOS DE PAGO:\nEl total de la compra es de $${totalParcial}\n¿Qué metodo de pago deseas utilizar?\n 1. Tarjeta de Débito\n 2. Tarjeta de Crédito`));
 
-} while(validacion(metodoPago,0,3,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+} while(validacion(metodoPago,0,2,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
 
 if(metodoPago==2){
     do{
         do{
             cuotas=parseInt(prompt("TARJETA DE CRÉDITO:\n¿En cuántas cuotas deseas abonar? Puedes elegir 1 pago sin interés ó hasta 12 cuotas con recargo (5% de interés por cuota)\nIngresa la cantidad de cuotas a realizar:"));
-        }while(validacion(cuotas,0,13,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+        }while(validacion(cuotas,0,12,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
 
         if(cuotas==1){
 
             do{
                 confirmaPago=parseInt(prompt(`CONFIRMACIÓN DE COMPRA:\nEl total de la compra es de $${totalCompra=totalParcial} a abonarse en 1 pago sin interés\n¿Deseas continuar?\n 1. Confirmar pago\n 2. Elegir otra cantidad de cuota/s`));
-            }while(validacion(confirmaPago,0,3,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+            }while(validacion(confirmaPago,0,2,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
             valorCuota=totalCompra;
 
         }else{
 
             do{
                 confirmaPago=parseInt(prompt(`CONFIRMACIÓN DE COMPRA:\nEl total de la compra es de $${totalCompra=totalRecargo(totalParcial,interes,cuotas)} a abonarse en ${cuotas} cuotas de $${valorCuota=montoCuota(totalRecargo(totalParcial,interes,cuotas),cuotas)}\n¿Deseas continuar?\n 1. Confirmar pago\n 2. Elegir otra cantidad de cuota/s`));
-            }while(validacion(confirmaPago,0,13,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
+            }while(validacion(confirmaPago,0,2,"Error: Ingresaste una opción inválida, inténtalo nuevamente.")==false);
 
         }
     }while(confirmaPago==2);
