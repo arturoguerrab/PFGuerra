@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch&family=Jost:wght@200&family=Lato:ital,wght@0,400;1,300&family=Montserrat+Alternates:wght@200&family=Old+Standard+TT:ital@0;1&family=Outfit:wght@200;400&family=Silkscreen&family=Staatliches&display=swap" rel="stylesheet">
-    <title>Conocé sobre nosotros | Whimsy</title>
-    <meta name="title" content="Conoce sobre nosotros | Whimsy">
-    <meta name="description" content="Una compañia que con un aroma busca alegrarte el dia, te contamos mas sobre nosotros!">
+    <title>Vela Aromática De Soja | Whimsy</title>
+    <meta name="title" content="Vela Aromatica De Soja | Whimsy">
+    <meta name="description" content="Las mejores opciones para aromatizar tu hogar.">
     <link rel="shortcut icon" href="../assets/icons/logowhimsy.png">
 </head>
 
@@ -21,14 +21,14 @@
         <div class="navbar fixed-top navbar-expand-lg border-bottom">
             <div class="container align-items-center">
                 <a href="../index.html"><img src="../assets/img/logowhimsy.gif" alt="Logo de la marca Whimsy" class="nav__img"></a>
-                <a href="./carrito.html" class="nav__bag order-lg-last"><i class="bi bi-bag-heart"></i></a>
+                <a href="#" class="nav__bag order-lg-last"><i class="bi bi-bag-heart"></i></a>
                 <button class="navbar-toggler order-first" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
                 </button>
                 <nav class="collapse navbar-collapse justify-content-center" id="navmenu">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="./products.html">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./about.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html">Nosotros</a></li>
                         <li class="nav-item"><a class="nav-link" href="./contact.html">Contacto</a></li>
                     </ul>
                 </nav>  
@@ -38,39 +38,23 @@
     <!-- /* ----Barra de Navegacion---- */ -->
 
     <main>
-        <div class="about__bg">
-            <section class="container-fluid abouta__fluid">
-                <div class="container pt-5 pb-5">
-                    <div class="row gap-5 align-items-center justify-content-center about__one">
-                        <img src="../assets/img/imagen_e.jpg" loading="lazy" alt="Vela con unas flores detras" class="about__img col-lg-6">
-                        <article class="about__info col-lg-6 order-lg-first text-lg-end">
-                            <h1>Whimsy</h1>
-                            <h2>Querés saber de nosotros?</h2>
-                            <p>Somos una Tienda Familiar que busca innovarse cada día para brindarte la mejor experiencia! Nuestros valores nos comprometen con cada cliente para que disfruten cada día una experiencia única, a su vez somos concientes con el medio ambiente, es por eso que nuestros materiales son 100% orgánicos y no contaminan, también todo nuestro embasado es totalmente artesanal y reutilizable</p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <section class="container__fluid aboutb__fluid d-flex flex-column justify-content-center align-content-center about__two">
-                <div class="container p-4">
-                    <p class="text-start">'Dicen que hay pocas cosas en la vida que podríamos mirar para siempre, sin aburrirnos, y una de ellas es, sin duda, el fuego.  Encender una vela y mirarla mientras se consume tiene un poder relajante que ayuda a la introspección debido al ambiente personal e íntimo que crea cualquier vela encendida.'</p>
-                    <p class="text-end">Whimsy CO.</p>
-                </div>
-            </section>
 
-    <!-- /* ----Seccion Tarjetas/about---- */ -->
-            <section class="container-fluid abouta__fluid">
-                <div class="container">
-                    <div class="row align-items-center justify-content-center p-4 gap-3">
-                            <img class="col-md-8 col-lg-3" src="../assets/img/imagen_a.jpg" loading="lazy" alt="Imagen creativa de una vela en un collage">
-                            <img class="col-md-8 col-lg-4" src="../assets/img/imagen_c.jpg" loading="lazy" alt="Imagen creativa de una vela en un collage">
-                            <img class="col-md-8 col-lg-3" src="../assets/img/imagen_b.jpg" loading="lazy" alt="Imagen creativa de una vela en un collage">
-                    </div>    
-                </div>
-            </section>
-    <!-- /* ----Seccion Tarjetas/about---- */ -->
+    <!-- /* ----Seccion nosotros/about---- */ -->
+        <section class="container-fluid h-100">
+            <div class="container data__container d-flex align-items-center row">
+                <h1 class="col-12">CARRITO DE COMPRA</h1>
+                <div class="row justify-content-center m-3 gap-3 col-12" id="carrito">
 
-        </div>
+                </div>
+                <div id="totalCarrito">
+                    <p>Total: xxx.xx</p>
+                    <a href="../index.html"><button id="pagar">Pagar</button></a>
+
+                </div>
+            </div>
+        </section>
+    <!-- /* ----Seccion nosotros/about---- */ -->
+
     </main>
 
     <!-- /* ----Footer---- */ -->
@@ -95,5 +79,7 @@
     <!-- /* ----Footer---- */ -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="../main.js"></script>
+    <script src="../javascript/carrito.js"></script>
 </body>
 </html>
