@@ -1,21 +1,58 @@
-class Producto{
-    constructor (nombre,precio,articulo,imagen,descripcion){
-        this.nombre=nombre;
-        this.precio=precio;
-        this.articulo=articulo;
-        this.imagen=imagen;
-        this.descripcion=descripcion;
+const dbSincronica=[
+    {nombre:"Anthurium",precio:899,articulo:"a",imagen:"./assets/img/tarjeta_a.jpg",descripcion:"Vela aromatica con olor a vainilla"},
+
+    {nombre:"Nympholia",precio:750,articulo:"b",imagen:"./assets/img/tarjeta_b.jpg",descripcion:"Vela aromatica con olor a canela"},
+
+    {nombre:"Euphoriasme",precio:640,articulo:"c",imagen:"./assets/img/tarjeta_c.jpg",descripcion:"Vela aromatica con olor a frutos del bosque"},
+
+    {nombre:"Anamorphine",precio:958,articulo:"d",imagen:"./assets/img/tarjeta_d.jpg",descripcion:"Vela aromatica con olor a chocolate"},
+
+    {nombre:"Nudesse",precio:860,articulo:"e",imagen:"./assets/img/tarjeta_e.jpg",descripcion:"Vela aromatica con olor a vainilla y canela"},
+
+    {nombre:"Anamorphine",precio:940,articulo:"f",imagen:"./assets/img/tarjeta_f.jpg",descripcion:"Vela aromatica con olor a rosas"}
+]
+
+
+
+
+const obtenerProductos = async (nodo)=>{
+    try {
+        let response = await fetch("./dbProductos.json");
+        let result = await response.json();
+        result.sort(()=> Math.random()-0.5)
+        let i=0;
+        result.forEach(element => {
+            if(i<3){
+                const div = document.createElement('div');
+                div.classList.add('d-flex','flex-column','justify-content-center','gap-1','tarjeta')
+                div.setAttribute('id','velaBtn')
+                div.innerHTML += `  <img class="tarjeta__img" src="${element.imagen}" loading="lazy" alt="Foto de ${element.descripcion}">
+                                    <div class="bg-light">
+                                    <h3 class="tarjeta__title">${element.nombre}</h3>
+                                    <p class="fw-bold">$${element.precio}</p>
+                                    <p class="fw-bold">${element.descripcion}</p>
+                                    </div>
+                `;
+                nodo.appendChild(div);
+            }
+            if(i==4){
+                const div = document.createElement('div');
+                div.classList.add('d-none','d-lg-none','d-md-flex','d-flex','flex-column','justify-content-center','gap-1','tarjeta')
+                div.setAttribute('id','velaBtn')
+                div.innerHTML += `  <img class="tarjeta__img" src="${element.imagen}" loading="lazy" alt="Foto de ${element.descripcion}">
+                                    <div class="bg-light">
+                                    <h3 class="tarjeta__title">${element.nombre}</h3>
+                                    <p class="fw-bold">$${element.precio}</p>
+                                    <p class="fw-bold">${element.descripcion}</p>
+                                    </div>
+                `;
+                nodo.appendChild(div);
+            }
+            i++;
+        });
+    } catch (error) {
+        console.log(error);
     }
 }
-
-const productoA = new Producto("Anthurium",799.99,"a","./assets/img/tarjeta_a.jpg","vela aromatica con olor a uvas y flores de primavera");
-const productoF = new Producto("Lili Anamorphine",899.99,"f","./assets/img/tarjeta_f.jpg","vela aromatica con olor a vainilla");
-const productoC = new Producto("Euphoriasme",949.99,"c","./assets/img/tarjeta_c.jpg","vela aromatica con olor a canela");
-const productoD = new Producto("Anamorphine",999.99,"d","./assets/img/tarjeta_d.jpg","vela aromatica con olor a rocio de invierno");
-
-
-const listaDeProductos=[productoA,productoF,productoC,productoD];
-
-
 
 
