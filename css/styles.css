@@ -171,6 +171,19 @@ span {
   color: #ec75cf;
 }
 
+.carrito__tarjeta img {
+  height: 150px;
+  width: 150px;
+}
+
+.strong {
+  color: #ec75cf;
+}
+
+.temporal {
+  height: 50vh;
+}
+
 .hero {
   background-image: url(../assets/img/hero-sm.jpg);
   height: 91vh;
