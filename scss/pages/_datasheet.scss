@@ -1,0 +1,14 @@
+.select__data{
+    border: solid black 1px;
+    background: transparent;
+    height: 25px;
+    width: 50px;
+    font-size: 1rem;
+    font-family: 'poppins';
+    &:focus{
+        outline: none;
+    }
+}
+.italic{
+    font-style: italic;
+}

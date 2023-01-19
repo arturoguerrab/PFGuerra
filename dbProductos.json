@@ -1,13 +1,31 @@
 [
-    {"nombre":"Anthurium","precio":899,"articulo":"a","imagen":"./assets/img/tarjeta_a.jpg","descripcion":"Vela aromatica con olor a vainilla"},
+    {"nombre":"Anamorphine","precio":890,"articulo":"a","imagen":"./assets/img/tarjeta_aDos.jpg","descripcion":"Peonías y Rosas Damascenas + Frambuesas"},
 
-    {"nombre":"Nympholia","precio":750,"articulo":"b","imagen":"./assets/img/tarjeta_b.jpg","descripcion":"Vela aromatica con olor a canela"},
+    {"nombre":"Monogram","precio":750,"articulo":"b","imagen":"./assets/img/tarjeta_bDos.jpg","descripcion":"Cuero Italiano, Hojas de Violeta y Sándalo"},
 
-    {"nombre":"Euphoriasme","precio":640,"articulo":"c","imagen":"./assets/img/tarjeta_c.jpg","descripcion":"Vela aromatica con olor a frutilla"},
+    {"nombre":"Euphoriasme","precio":640,"articulo":"c","imagen":"./assets/img/tarjeta_cDos.jpg","descripcion":"Croissant con Frambuesas + Agua de Rosas y Arándanos"},
 
-    {"nombre":"Anamorphine","precio":958,"articulo":"d","imagen":"./assets/img/tarjeta_d.jpg","descripcion":"Vela aromatica con olor a chocolate"},
+    {"nombre":"Topiary","precio":950,"articulo":"d","imagen":"./assets/img/tarjeta_dDos.jpg","descripcion":"Flores y plantas de un Jardín Inglés"},
 
-    {"nombre":"Nudesse","precio":860,"articulo":"e","imagen":"./assets/img/tarjeta_e.jpg","descripcion":"Vela aromatica con olor a tabaco"},
+    {"nombre":"Valkiria","precio":860,"articulo":"e","imagen":"./assets/img/tarjeta_eDos.jpg","descripcion":"Higos, Pulpa de Melocotón, Leche de Coco y Cedro"},
 
-    {"nombre":"Anamorphine","precio":940,"articulo":"f","imagen":"./assets/img/tarjeta_f.jpg","descripcion":"Vela aromatica con olor a rosas"}
+    {"nombre":"Carnal Fruit","precio":940,"articulo":"f","imagen":"./assets/img/tarjeta_fDos.jpg","descripcion":"Ruibarbo y Rosellas Blancas + Madera de Cerezo"},
+
+    {"nombre":"Nudesse","precio":910,"articulo":"g","imagen":"./assets/img/tarjeta_gDos.jpg","descripcion":"Rosa de Mayo y Rosa Damascena + Rocío"},
+    
+    {"nombre":"Pain Au Chocolat","precio":920,"articulo":"h","imagen":"./assets/img/tarjeta_hDos.jpg","descripcion":"Croissant con Chocolate y Avellanas"},
+    
+    {"nombre":"Cult","precio":750,"articulo":"i","imagen":"./assets/img/tarjeta_iDos.jpg","descripcion":"Madera de Ébano, Cerezo y Pachuli"},
+    
+    {"nombre":"Almond Croissant","precio":830,"articulo":"j","imagen":"./assets/img/tarjeta_jDos.jpg","descripcion":"Croissant con Crema de Almendras y Licor de Amoretto"},
+    
+    {"nombre":"Stems","precio":940,"articulo":"k","imagen":"./assets/img/tarjeta_kDos.jpg","descripcion":"Tulipanes, Rosas, Margaritas y Cítricos"},
+    
+    {"nombre":"Croissant","precio":690,"articulo":"l","imagen":"./assets/img/tarjeta_lDos.jpg","descripcion":"100% Croissants Parisinos recién horneados"},
+    
+    {"nombre":"Macaron Pistache","precio":540,"articulo":"m","imagen":"./assets/img/tarjeta_mDos.jpg","descripcion":"Delicioso Macarrón de Pistacho"},
+    
+    {"nombre":"Cinnamon Roll","precio":710,"articulo":"n","imagen":"./assets/img/tarjeta_nDos.jpg","descripcion":"Cinnamon Rolls + Glaseado de Vainilla"},
+    
+    {"nombre":"Gaiasilk","precio":780,"articulo":"o","imagen":"./assets/img/tarjeta_oDos.jpg","descripcion":"Palo Santo, Chocolate Blanco, Vainilla y Sándalo"}
 ]

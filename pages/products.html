@@ -7,8 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch&family=Jost:wght@200&family=Lato:ital,wght@0,400;1,300&family=Montserrat+Alternates:wght@200&family=Old+Standard+TT:ital@0;1&family=Outfit:wght@200;400&family=Silkscreen&family=Staatliches&display=swap" rel="stylesheet">
-    <title>Productos | Whimsy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@200&family=Lato:ital,wght@0,400;1,300&family=Montserrat+Alternates:wght@200&family=Old+Standard+TT:ital@0;1&family=Outfit:wght@200;400&family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Silkscreen&family=Staatliches&display=swap" rel="stylesheet">    <title>Productos | Whimsy</title>
     <meta name="title" content="Productos | Whimsy">
     <meta name="description" content="Nuestros mejores productos para todos los gustos.">
     <link rel="shortcut icon" href="../assets/icons/logowhimsy.png">
@@ -41,19 +42,21 @@
     <!-- /* ----Seccion Productos title/products---- */ -->
         <div class="container-fluid position-fixed span__promo"><span class="fw-bold">3 Y 6 CUOTAS SIN INTERÉS - FREESHIPING</span></div>
         <div class="container d-flex justify-content-center">
-            <h1 class="pt-5 display-2">Velas Aromáticas de Soja</h1>
+            <div class="row productos__title w-100 align-items-baseline">
+                <h1 class="col-4 text-start">Todos los productos</h1>
+                <select name="select" id="select" class="col-4 text-end">
+                    <option value="relevantes">Más relevantes</option>
+                    <option value="alfabetico">Nombre [A-Z]</option>
+                    <option value="baratos">Precio [Menor-Mayor]</option>
+                    <option value="caros">Precio [Mayor-Menor]</option>
+                </select>
+            </div>
         </div>
     <!-- /* ----Seccion Productos title/products---- */ -->
 
     <!-- /* ----Seccion Tarjetas/products---- */ -->
         <section class="container-fluid">
             <div class="container">
-                <select name="select" id="select">
-                    <option value="relevantes">Mas relevantes</option>
-                    <option value="alfabetico">Nombre [A-Z]</option>
-                    <option value="baratos">Precio [menor-mayor]</option>
-                    <option value="caros">Precio [mayor-menor]</option>
-                </select>
                 <div class="row justify-content-center" id="Productos">
                     
                 </div>

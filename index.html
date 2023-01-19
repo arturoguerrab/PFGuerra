@@ -7,7 +7,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch&family=Jost:wght@200&family=Lato:ital,wght@0,400;1,300&family=Montserrat+Alternates:wght@200&family=Old+Standard+TT:ital@0;1&family=Outfit:wght@200;400&family=Silkscreen&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@200&family=Lato:ital,wght@0,400;1,300&family=Montserrat+Alternates:wght@200&family=Old+Standard+TT:ital@0;1&family=Outfit:wght@200;400&family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Silkscreen&family=Staatliches&display=swap" rel="stylesheet">    
     <title>Whimsy | Velas Aromáticas de Soja, Buenos Aires</title>
     <meta name="title" content="Whimsy | Velas Aromaticas de Soja, Buenos Aires">
     <meta name="description" content="Buscamos el aroma que nos dice mucho sobre cada persona y la historia que desea contar.">
@@ -39,11 +41,11 @@
     <main>
 
     <!-- /* ----Seccion Hero/Index---- */ -->
-        <section class="container-fluid d-flex align-items-center hero">
-            <div class="container w-75 text-center">
-                <div class="row bg-light bg-opacity-75">
-                    <h1 class="col-12">Whimsy<h1>
-                    <h2 class="col-12">aromatizá momentos</h2>
+        <section class="container-fluid d-flex align-items-star hero">
+            <div class="container text-center text-md-start">
+                <div class="titulo__index">
+                    <h1>Whimsy<h1>
+                    <a href="#descubri"> Descubrí lo nuevo </a>
                 </div>
             </div>
         </section>
@@ -54,37 +56,32 @@
             <img src="./assets/img/shopnow.gif" alt="Gif con el texto Shop Now" loading="lazy">
         </div>
     <!-- /* ----Seccion gift/index---- */ -->
-
+        <a href="#"name="descubri"></a>
     <!-- /* ----Seccion Tarjetas/index---- */ -->
-        <section class="container-fluid">
+        <section class="container-fluid" name="descubri">
+            <a href="#"name="descubri"></a>
             <div class="container text-center mt-4 mb-4">
-                <h2>PRODUCTOS DESTACADOS</h2>
+                <h2>Productos Destacados</h2>
                 <div class="row justify-content-center justify-content-lg-evenly text-center" id="productosIndex">
                     <!-- DATOS CARGADOS DE FORMA DINAMICA DESDE LA BASE DE DATOS -->
                 </div>
-                <a class="btn__tarjeta align-self-center" href="./pages/products.html">VER MAS PRODUCTOS</a>
+                <a class="btn__tarjeta align-self-center" href="./pages/products.html">VER MÁS PRODUCTOS</a>
             </div>      
         </section>
     <!-- /* ----Seccion Tarjetas/index---- */ -->
 
+    <div class="container-fluid gift">
+        <img src="./assets/img/shopnow.gif" alt="Gif con el texto Shop Now" loading="lazy">
+    </div>
+
     <!-- /* ----Seccion Nosotros/index---- */ -->
-        <section class="container-fluid nosotros">
-            <div class="container p-5 pt-0">
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-12 col-lg-6 text-center">
-                        <img class="nosotros__img" src="./assets/img/nosotroshome.gif" loading="lazy" alt="Modelo sosteniendo una vela">
-                    </div>
-                    <div class="col-12 col-lg-6 pt-4">
-                        <div class="text-center text-lg-start">
-                            <h2 class="fs-1">Whimsy</h2>
-                            <h3>Conocénos</h3>
-                            <p>Buscamos alegrarte el día con un aroma, trabajando día a día para mejorar y brindarte la mejor experiencia...</p>
-                            <a class="btn__nosotros" href="./pages/about.html">Conocé más de nosotros</a>
-                        </div>
-                    </div>
-                </div>
+    <section class="container-fluid nosotros d-flex justify-content-center align-items-start align-items-md-center justify-content-md-end pt-5">
+            <div class="about__index row text-center m-3 justify-content-center">
+                <h2 >100% <br> CRUELTY FREE</h2>
+                <p>Porque todos somos importantes, desde Whimsy estamos comprometidos con la preservación de nuestro planeta</p>
+                <a href="./pages/about.html" class="btn__tarjeta w-50 ">Saber más</a>
             </div>
-        </section>
+    </section>
     <!-- /* ----Seccion Nosotros/index---- */ -->
 
     </main>

@@ -1,6 +1,10 @@
+// Variables del DOM
 const contenedorCarrito = document.querySelector('#carritoContenedor');
 const contenedorPagoTotal = document.querySelector("#totalCarrito");
 
+// Funciones del carrito de compra
+
+// Filtra el carrito traido del localStorage para que no se muestren los elementos repetidos
 const filtrarCarrito = (array)=>{
     const carritoFiltrado=[];
     array.forEach(element => {
@@ -9,6 +13,7 @@ const filtrarCarrito = (array)=>{
     return carritoFiltrado;
 }
 
+// Calcula la cantidad de cada producto en el carrito de compra del localStorage
 const calcularCantidad=(objeto,array)=>{
     let contador=0;
     array.forEach(element => {
@@ -17,11 +22,17 @@ const calcularCantidad=(objeto,array)=>{
     return contador;
 }
 
+// Elimina la cantidad de productos del carrito segun el usuario desee
 const eliminarDelCarrito = (articulo,array)=>{
     const resultado = array.filter(element => element != articulo)
     localStorage.setItem('carrito',JSON.stringify(resultado));
     refrescarCarrito()
 }
+
+// Funcion principal que pinta el carrito de compra actualizado con todos sus eventos (eliminar producto) y
+// Crea los botones: 
+// Pagar: que emite un alert hecho con la libreria SweetAlert2 y si es positiva la respuesta limpia el carrito finalizando la compra
+// Seguir comprando: para ir a los productos por si deseea agregar algo mas
 
 const refrescarCarrito = ()=>{
 
@@ -36,13 +47,13 @@ const refrescarCarrito = ()=>{
     let contador=0;
     carritoSinDuplicados.forEach(element => {
         const div = document.createElement('div');
-        div.classList.add('d-flex', 'carrito__tarjeta', 'gap-1','gap-md-5', 'justify-content-center')
-        div.innerHTML+= `<img src=".${element.imagen}" alt="${element.descripcion}">
-                        <div class="d-flex flex-column text-start">
-                            <h3 class="display-6">${element.nombre}</h3>
+        div.classList.add('row','flex-column','carrito__tarjeta')
+        div.innerHTML+= `<img class='align-self-end' src=".${element.imagen}" alt="${element.descripcion}">
+                        <div class="d-flex flex-column carrito__info align-self-start justify-content-center">
+                            <h3>${element.nombre}</h3>
                             <p>Cantidad: ${calcularCantidad(element,carritoCompra)}</p>
-                            <p>c/u $${element.precio} | <strong class="strong">Total: $${calcularCantidad(element,carritoCompra)*element.precio}</strong></p>
-                            <button id="btnBorrar${element.articulo}" class="btn btn-danger bi bi-trash3 w-25"></button>
+                            <p>$ ${element.precio},00 <br> <strong class="strong">Total: $ ${calcularCantidad(element,carritoCompra)*element.precio},00</strong></p>
+                            <button id="btnBorrar${element.articulo}" class="btn btn-danger bi bi-trash3 w-50"></button>
                         </div>`
         contenedorCarrito.appendChild(div);
 
@@ -52,26 +63,28 @@ const refrescarCarrito = ()=>{
         }
 
         contador+=calcularCantidad(element,carritoCompra)*element.precio;
-        contenedorPagoTotal.innerHTML=`<h2>Resumen de compra</h2>
-                                        <p><strong class="strong display-6">Total: $${contador}</strong></p>
-                                        <a href="#"><button id="pagar" class="btn-success btn w-50 mb-2">Pagar</button></a>
-                                        <a href="../pages/products.html"><button class="btn btn-secondary w-50">Seguir Comprando</button></a>
+        contenedorPagoTotal.innerHTML=`<h2 class='text-center'>Resumen de compra:</h2>
+                                        <p><strong class="strong">Total: $ ${contador},00</strong></p>
+                                        <button id="pagar" class="btn-success btn w-50 mb-2">Pagar</button>
+                                        <a href="../pages/products.html" class='w-50'><button class="btn btn-secondary w-100">Seguir Comprando</button></a>
                                         `
+        contenedorPagoTotal.classList.add('bg-light');
+
         let btnPagar = document.querySelector('#pagar');
         btnPagar.onclick=()=>{
             Swal.fire({
                 title: '¿Finalizar compra?',
-                text: `Total: $${contador}`,
+                text: `Total: $ ${contador},00`,
                 icon: 'warning',
                 showCancelButton: true,
-                confirmButtonColor: '#3085d6',
+                confirmButtonColor: '#11B82B',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Pagar'
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire(
                         'Pago realizado',
-                        '¡Compra exitosa!',
+                        '¡Compra exitosa! :)',
                         'success'
                     )
                     setTimeout(()=>{
@@ -83,4 +96,6 @@ const refrescarCarrito = ()=>{
         }
     });
 }
+
+// Condicional que evita que se ejecucte refrescarCarrito si no se ha anadido ningun producto.
 JSON.parse(localStorage.getItem('carrito'))!=null && refrescarCarrito();

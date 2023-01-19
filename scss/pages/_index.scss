@@ -1,4 +1,21 @@
 //Seccion gift/index
+.titulo__index{
+    padding-top: 80px;
+    width: 300px;
+    h1{
+        font-size: 5rem;
+        height: 30px;
+    }
+    a{
+        padding:7px;
+        font-size: 1.2rem;
+        color: $color-light;
+        background-color: rgba(0, 0, 0, 0.726);
+        &:hover{
+            color: $color-acento;
+        }
+    }
+}
 
 .hero{
     background-image: url(../assets/img/hero-sm.jpg);
@@ -21,9 +38,9 @@
 // Seccion gift/index
 
 .gift{
-    height: 48px;
+    height: 100%;
     margin-top: 18px;
-    background-color:$color-acento;
+    background-color:$color-dark;
     overflow: hidden;
     img {
         height: 90%;
@@ -36,17 +53,27 @@
 //Seccion Nosotros/index
 
 .nosotros{
-    background-color: $color-components;
-    &__img{
-        width: 250px;
-        height: 350px;
-        @include media-md{
-            width: 380px;
-            height: 520px;
-        }
-        @include media-lg{
-            width: 380px;
-            height: 700px;
-        }
+    background-image: url(../assets/img/cruelty-sm.jpg);
+    height: 91vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include media-sm{
+        background-image: url(../assets/img/cruelty-md.jpg);
+    }
+    @include media-md{
+        background-image: url(../assets/img/cruelty-lg.jpg);
     }
 }
+
+.about__index{
+    width: 75%;
+    @include media-md{
+        width: 50%;
+    }
+    h2{
+        font-family: 'bebas';
+        font-size: 2rem;
+    }
+}
+
